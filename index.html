@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資傳野餐日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'k-bg': '#FFFFFF',
+                        'k-bg-light': '#FFF5F5',
+                        'k-pink': '#FFC0CB',
+                        'k-coffee': '#6F4E37',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            color: #6F4E37; /* 全域文字色使用暖咖啡色 */
+        }
+    </style>
+</head>
+<body class="bg-k-bg font-sans antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-k-bg-light shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-serif font-bold text-lg tracking-wider text-k-coffee">
+                    SHU INFO-COMM <span class="text-k-pink">1A</span>
+                </div>
+                <div class="hidden md:block space-x-8">
+                    <a href="#info" class="hover:text-k-pink transition-colors font-medium">活動資訊</a>
+                    <a href="#traffic" class="hover:text-k-pink transition-colors font-medium">交通指南</a>
+                    <a href="#notice" class="hover:text-k-pink transition-colors font-medium">注意事項</a>
+                    <a href="#register" class="bg-k-pink hover:bg-pink-300 text-white px-4 py-2 rounded-full transition-all text-sm font-medium shadow-sm">立即報名</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-k-coffee focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-k-bg-light px-4 pt-2 pb-4 space-y-2 text-center shadow-inner">
+            <a href="#info" class="block py-2 hover:bg-k-bg-light rounded transition-colors">活動資訊</a>
+            <a href="#traffic" class="block py-2 hover:bg-k-bg-light rounded transition-colors">交通指南</a>
+            <a href="#notice" class="block py-2 hover:bg-k-bg-light rounded transition-colors">注意事項</a>
+            <a href="#register" class="block py-2 bg-k-pink text-white rounded-full transition-colors font-medium">立即報名</a>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden bg-gradient-to-b from-k-bg-light to-white py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block bg-white text-k-coffee text-xs tracking-widest px-3 py-1.5 rounded-full border border-k-pink/40 mb-4 shadow-sm">SUMMER PICNIC DAY</span>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4 font-serif text-k-coffee">
+                <span class="relative inline-block">資傳一甲<span class="absolute left-0 bottom-1 w-full h-3 bg-k-pink/30 -z-10"></span></span>野餐日
+            </h1>
+            <p class="text-base md:text-lg text-k-coffee/80 max-w-xl mx-auto mb-10 leading-relaxed">
+                微風、草地、還有好久不見的大家。準備好你的野餐墊，和一甲的同學們一起在草地上享受初夏的溫暖陽光吧！
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#info" class="border border-k-coffee/30 hover:border-k-coffee text-k-coffee px-6 py-3 rounded-full transition-all text-sm font-medium">查看詳情</a>
+                <a href="#register" class="bg-k-pink hover:bg-pink-300 text-white px-8 py-3 rounded-full transition-all text-sm font-medium shadow-md hover:shadow-lg">線上報名 ➔</a>
+            </div>
+        </div>
+        <div class="absolute top-1/4 left-10 w-24 h-24 bg-k-pink/20 rounded-full filter blur-xl opacity-70"></div>
+        <div class="absolute bottom-10 right-10 w-36 h-36 bg-pink-100 rounded-full filter blur-xl opacity-60"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 mt-12">
+            <div class="h-64 md:h-96 w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                <img src="IMG_1210.PNG" alt="Picnic Aesthetic" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </header>
+    <!-- 活動細節區塊 -->
+    <section id="info" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold font-serif mb-2">活動細節</h2>
+                <div class="h-1 w-10 bg-k-pink mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- 1. 日期時間 (金黃色系邊框) -->
+                <div class="p-6 bg-amber-50/30 rounded-2xl border-2 border-amber-100 hover:border-amber-300 transition-all shadow-sm text-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-amber-100">
+                        <svg class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-amber-900 mb-2">日期時間</h3>
+                    <p class="text-sm text-k-coffee/80">2026年 6月 6日 (六)</p>
+                    <p class="text-xs text-k-coffee/60 mt-1">下午 13:30 集合入場</p>
+                </div>
+
+                <!-- 2. 活動地點 (草地青綠色系邊框) -->
+                <div class="p-6 bg-emerald-50/30 rounded-2xl border-2 border-emerald-100 hover:border-emerald-300 transition-all shadow-sm text-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-emerald-100">
+                        <svg class="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-emerald-900 mb-2">活動地點</h3>
+                    <p class="text-sm text-k-coffee/80 font-medium">美堤河濱公園</p>
+                    <p class="text-xs text-k-coffee/60 mt-1">（大草皮野餐區）</p>
+                </div>
+
+                <!-- 3. 活動費用 (主色調浪漫粉邊框) -->
+                <div class="p-6 bg-pink-50/30 rounded-2xl border-2 border-pink-100 hover:border-pink-300 transition-all shadow-sm text-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-pink-100">
+                        <svg class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-pink-900 mb-2">活動費用</h3>
+                    <p class="text-sm text-pink-600 font-bold text-lg">NT$ 150 / 人</p>
+                    <p class="text-xs text-k-coffee/60 mt-1 leading-relaxed">包含：精緻韓系輕食餐點、飲品、活動平安保險</p>
+                </div>
+
+            </div>
+            
+            <div class="mt-6 text-center">
+                <span class="inline-block bg-pink-50 border border-k-pink text-pink-700 text-xs px-4 py-1.5 rounded-full">
+                    ⚠️ 報名截止日期：<strong>2026年 5月 25日 23:59 截止</strong>
+                </span>
+            </div>
+        </div>
+     </section>
+     <!-- 交通指南區塊 -->
+    <section id="traffic" class="py-16 bg-k-bg-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold font-serif mb-2">交通指南</h2>
+                <div class="h-1 w-10 bg-k-pink mx-auto rounded"></div>
+            </div>
+            
+            <!-- 卡片容器，改為每換一個介紹就有獨立的特別邊框與風格 -->
+            <div class="space-y-8">
+                
+                <!-- 1. 捷運 (獨立藍綠色調邊框) -->
+                <div class="flex flex-col md:flex-row items-start gap-6 bg-white rounded-2xl p-6 shadow-md border-2 border-teal-100 hover:border-teal-300 transition-all">
+                    <div class="flex-shrink-0 bg-teal-50 text-teal-700 font-bold px-4 py-1.5 rounded-full text-sm">
+                        捷運
+                    </div>
+                    <div class="flex-1 w-full">
+                        <h4 class="font-bold text-lg text-teal-800 mb-1">文湖線 劍南路站</h4>
+                        <p class="text-sm text-k-coffee/80 leading-relaxed mb-4">
+                            自行前往由 3 號出口出站，沿敬業三路往河濱公園方向步行約 10-15 分鐘，即可抵達美堤疏散門。
+                        </p>
+                        <!-- 統一尺寸的照片 -->
+                        <div class="w-full h-48 md:h-56 rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                            <img src="IMG_1222.JPG" alt="捷運交通指引" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. 公車 (獨立暖橘色調邊框) -->
+                <div class="flex flex-col md:flex-row items-start gap-6 bg-white rounded-2xl p-6 shadow-md border-2 border-orange-100 hover:border-orange-300 transition-all">
+                    <div class="flex-shrink-0 bg-orange-50 text-orange-700 font-bold px-4 py-1.5 rounded-full text-sm">
+                        公車
+                    </div>
+                    <div class="flex-1 w-full">
+                        <h4 class="font-bold text-lg text-orange-800 mb-1">美堤碼頭站 / 明水路口站</h4>
+                        <p class="text-sm text-k-coffee/80 leading-relaxed mb-4">
+                            自行前往可搭乘 72、222、藍26 至「美堤碼頭」站下車直達；或搭乘多線公車至「明水路口」站再步行進入。
+                        </p>
+                        <!-- 統一尺寸的照片 -->
+                        <div class="w-full h-48 md:h-56 rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                            <img src="IMG_1212.PNG" alt="公車交通指引" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. 學校集合 (特別主色粉紅邊框 + 金色微調) -->
+                <div class="flex flex-col md:flex-row items-start gap-6 bg-gradient-to-br from-white to-pink-50/30 rounded-2xl p-6 shadow-md border-2 border-k-pink hover:border-pink-400 transition-all">
+                    <div class="flex-shrink-0 bg-k-pink text-white font-bold px-4 py-1.5 rounded-full text-sm shadow-sm">
+                        集合
+                    </div>
+                    <div class="flex-1 w-full">
+                        <h4 class="font-bold text-lg text-pink-700 mb-1">資傳一甲集合點</h4>
+                        <p class="text-sm text-k-coffee/90 leading-relaxed font-medium mb-4">
+                            學校集合當天中午 12 點 於「<strong>世新大學山洞口</strong>」處（會有總召拿著世新資傳的系旗迎接大家喔！）。
+                        </p>
+                        <!-- 統一尺寸的照片 -->
+                        <div class="w-full h-48 md:h-56 rounded-xl overflow-hidden shadow-sm border border-pink-100">
+                            <img src="IMG_1220.JPG" alt="世新山洞口集合點" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 注意事項區塊 -->
+    <section id="notice" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold font-serif mb-2">注意事項</h2>
+                <div class="h-1 w-10 bg-k-pink mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- 1. 雨天備案 (天藍色系) -->
+                <div class="p-6 bg-sky-50/40 rounded-2xl border border-sky-100 border-l-4 border-sky-400 hover:border-sky-300 transition-all shadow-sm">
+                    <h4 class="font-bold text-base text-sky-900 mb-2 flex items-center">
+                        🌤️ 雨天備案
+                    </h4>
+                    <p class="text-sm text-k-coffee/80 leading-relaxed">
+                        若活動前一日氣象局預報降雨機率大於 60%，活動將延期一週，或改至室內備案（另行在班群通知）。
+                    </p>
+                </div>
+                
+                <!-- 2. 個人攜帶物品 (薄荷綠色系) -->
+                <div class="p-6 bg-emerald-50/40 rounded-2xl border border-emerald-100 border-l-4 border-emerald-400 hover:border-emerald-300 transition-all shadow-sm">
+                    <h4 class="font-bold text-base text-emerald-900 mb-2 flex items-center">
+                        🎒 個人攜帶物品建議
+                    </h4>
+                    <p class="text-sm text-k-coffee/80 leading-relaxed">
+                        初夏防曬不可少！建議攜帶防曬乳、遮陽帽、防蚊液。為響應環保，請同學**自備環保餐具與水瓶**。
+                    </p>
+                </div>
+                
+                <!-- 3. 繳費與退費 (溫暖琥珀金) -->
+                <div class="p-6 bg-amber-50/40 rounded-2xl border border-amber-100 border-l-4 border-amber-400 hover:border-amber-300 transition-all shadow-sm">
+                    <h4 class="font-bold text-base text-amber-900 mb-2 flex items-center">
+                        💰 繳費流程與退費
+                    </h4>
+                    <p class="text-sm text-k-coffee/80 leading-relaxed">
+                        線上報名填寫完成後，請於 3 日內將費用（NT$ 150）交給總務股長。若因故需取消，請於活動前 3 天告知以利辦理保險退費。
+                    </p>
+                </div>
+                
+                <!-- 4. 安全與衛教 (初夏浪漫粉) -->
+                <div class="p-6 bg-pink-50/40 rounded-2xl border border-pink-100 border-l-4 border-k-pink hover:border-pink-300 transition-all shadow-sm">
+                    <h4 class="font-bold text-base text-pink-900 mb-2 flex items-center">
+                        🛡️ 安全與衛教
+                    </h4>
+                    <p class="text-sm text-k-coffee/80 leading-relaxed">
+                        戶外活動請注意自身安全。系上老師及助教也會共同參與指導。若有特殊疾病或飲食過敏（如素食），請務必於報名表單備註。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <section id="register" class="py-20 bg-gradient-to-t from-k-bg-light to-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-white to-pink-50 rounded-3xl p-8 md:p-12 shadow-md border border-k-pink/30">
+            <h2 class="text-3xl font-bold font-serif mb-3">快來參加吧!</h2>
+            <p class="text-base text-k-coffee/80 mb-8">
+                填寫線上報名表單，一起寫下大一留下美好的回憶吧！
+            </p>
+            
+            <a href="https://docs.google.com/forms/d/1qm-YPNJB47vBh_BScxSLVv7OMsT2PM_7SxukG4ZckgU/viewform" 
+               target="_blank" 
+               class="inline-block w-full sm:w-auto bg-k-pink hover:bg-pink-300 text-white font-bold text-base px-10 py-4 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                點我前往 Google 表單報名 ➔
+            </a>
+            
+            <p class="text-xs text-k-coffee/60 mt-6">
+                * 表單送出後，系統將會寄送確認信件至您的信箱。
+            </p>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-white py-8 border-t border-k-bg-light text-center text-xs text-k-coffee/60">
+        <p>© 2026 世新大學 資訊傳播學系 一年甲班. All Rights Reserved.</p>
+        <p class="mt-1 font-serif italic text-k-pink/80">Made with ❤️ for SHU INFO-COMM 1A</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 點擊選單項目後自動縮回選單
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
